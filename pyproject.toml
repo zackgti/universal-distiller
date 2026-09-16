@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "universal-distiller"
+version = "0.1.0"
+description = "Local-first research collection with traceable evidence and offline reports"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Zhipeng Cao"}]
+dependencies = []
+
+[project.scripts]
+ud = "ud_core.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
