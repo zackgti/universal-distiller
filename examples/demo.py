@@ -7,11 +7,12 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from ud_core.cli import main
 from ud_core.collect import collect, add_claim
-from ud_core.io_utils import read_json, write_json
+from ud_core.io_utils import read_json, write_json, configure_console
 from ud_core.project import initialize_project
 from ud_core.report import render_project
 
 parser = argparse.ArgumentParser()
+configure_console()
 parser.add_argument("--root", default="workspace/demo")
 args = parser.parse_args()
 root = Path(args.root).resolve()

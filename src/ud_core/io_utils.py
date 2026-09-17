@@ -3,9 +3,17 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
+
+
+def configure_console() -> None:
+    """Keep Chinese paths/JSON usable on legacy Windows and redirected streams."""
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
 
 
 def utc_now() -> str:

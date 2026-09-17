@@ -5,7 +5,7 @@ import json
 import sys
 from pathlib import Path
 
-from .io_utils import read_json, read_jsonl, write_json
+from .io_utils import read_json, read_jsonl, write_json, configure_console
 from .models import validate_research
 from .project import (
     compare_manifests,
@@ -146,6 +146,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: list[str] | None = None) -> int:
+    configure_console()
     parser = build_parser()
     args = parser.parse_args(argv)
     try:
