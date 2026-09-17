@@ -12,6 +12,10 @@ license = {text = "MIT"}
 authors = [{name = "Zhipeng Cao"}]
 dependencies = []
 
+[project.urls]
+Repository = "https://github.com/zackgti/universal-distiller"
+Issues = "https://github.com/zackgti/universal-distiller/issues"
+
 [project.scripts]
 ud = "ud_core.cli:main"
 

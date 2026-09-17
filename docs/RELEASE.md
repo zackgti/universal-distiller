@@ -1,10 +1,11 @@
 # Publication readiness
 
-Local v0.1.0 includes package metadata, MIT license, an offline synthetic example,
-tests, CI configuration and source provenance. It has not been published to GitHub
-or PyPI, and no sponsor application has been submitted for this project.
+Version 0.1.0 includes package metadata, MIT license, an offline synthetic example,
+tests, CI configuration and source provenance. The public repository is
+https://github.com/zackgti/universal-distiller. It is not published to PyPI,
+and no sponsor application has been submitted for this project.
 
-Before first public release:
+Release checks:
 
 - Review the retained prototype code's ownership and the chosen MIT license.
 - Run tests and installation in a clean environment; inspect the source archive.
